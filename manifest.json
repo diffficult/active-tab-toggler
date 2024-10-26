@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Active Tab Toggler",
+  "version": "1.1",
+  "description": "Toggle between last active tabs",
+  "icons": {
+    "16": "icons/toggle-16.png",
+    "32": "icons/toggle-32.png",
+    "48": "icons/toggle-48.png",
+    "96": "icons/toggle-96.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/toggle-16.png",
+      "32": "icons/toggle-32.png"
+    },
+    "default_title": "Active Tab Toggler"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "toggle-tabs": {
+      "suggested_key": {
+        "default": "Alt+W"
+      },
+      "description": "Toggle between last active tabs"
+    },
+    "clear-history": {
+      "suggested_key": {
+        "default": "Alt+Shift+Q"
+      },
+      "description": "Clear tab history"
+    }
+  }
+}
