@@ -1,15 +1,41 @@
 <!doctype html>
 <html>
     <head>
-        <title>Active Tab Toggler Settings</title>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                padding: 1em;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    sans-serif;
+            }
+            .shortcut-section {
+                margin-top: 1em;
+            }
+            #shortcutInput {
+                padding: 0.5em;
+                width: 200px;
+                margin-top: 0.5em;
+            }
+            #shortcutStatus {
+                margin-top: 0.5em;
+                font-size: 0.9em;
+            }
+        </style>
     </head>
     <body>
-        <form>
-            <label>
-                Maximum history size:
-                <input type="number" id="maxHistory" min="2" max="10" />
-            </label>
-        </form>
+        <div class="shortcut-section">
+            <label for="shortcutInput">Toggle Shortcut:</label><br />
+            <input
+                type="text"
+                id="shortcutInput"
+                placeholder="Press shortcut keys"
+                readonly
+            />
+            <div id="shortcutStatus"></div>
+        </div>
+
         <script src="options.js"></script>
     </body>
 </html>
